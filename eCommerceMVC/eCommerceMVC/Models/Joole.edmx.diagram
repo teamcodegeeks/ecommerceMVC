@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="900c45b4bc6747708b502e951a490311" Name="Diagram1" ZoomLevel="20">
+        <EntityTypeShape EntityType="JooleModel.FanTypeDetail" Width="1.5" PointX="12.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.Manufacture" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.Model" Width="1.5" PointX="10.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.Product" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.ProductCategory" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.ProductSubCategory" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.Series" Width="1.5" PointX="8.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.ToasterTypeDetail" Width="1.5" PointX="12.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.VacuumTypeDetail" Width="1.5" PointX="12.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.FanDescription" Width="1.5" PointX="7.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.ToasterDescription" Width="1.5" PointX="7.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JooleModel.VacuumDescription" Width="1.5" PointX="7.5" PointY="19.25" IsExpanded="true" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Model_FanTypeDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Manufacture_Series" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Model_Series" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Model_ToasterTypeDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Model_VacuumTypeDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Product_Model" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_FanDescription" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_ProductSubCategory_Model" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_ToasterDescription" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_VacuumDescription" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Category_SubCategpry" ManuallyRouted="false" />
+        <AssociationConnector Association="JooleModel.Joole_FK_Subcategory_Series" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JooleModelStoreContainer" CdmEntityContainer="JooleEntities">
+    <EntitySetMapping Name="FanTypeDetails">
+      <EntityTypeMapping TypeName="JooleModel.FanTypeDetail">
+        <MappingFragment StoreEntitySet="FanTypeDetails">
+          <ScalarProperty Name="ModelTypeId" ColumnName="ModelTypeId" />
+          <ScalarProperty Name="UseType" ColumnName="UseType" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="MountingLocation" ColumnName="MountingLocation" />
+          <ScalarProperty Name="Accessories" ColumnName="Accessories" />
+          <ScalarProperty Name="ModelYear" ColumnName="ModelYear" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufactures">
+      <EntityTypeMapping TypeName="JooleModel.Manufacture">
+        <MappingFragment StoreEntitySet="Manufacture">
+          <ScalarProperty Name="ManufactureId" ColumnName="ManufactureId" />
+          <ScalarProperty Name="ManufactureIdName" ColumnName="ManufactureIdName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="JooleModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="SeriesId" ColumnName="SeriesId" />
+          <ScalarProperty Name="ManufactureId" ColumnName="ManufactureId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="JooleModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ModelTypeId" ColumnName="ModelTypeId" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="JooleModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSubCategories">
+      <EntityTypeMapping TypeName="JooleModel.ProductSubCategory">
+        <MappingFragment StoreEntitySet="ProductSubCategory">
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Series">
+      <EntityTypeMapping TypeName="JooleModel.Series">
+        <MappingFragment StoreEntitySet="Series">
+          <ScalarProperty Name="SeriesId" ColumnName="SeriesId" />
+          <ScalarProperty Name="SeriesName" ColumnName="SeriesName" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="ManufactureId" ColumnName="ManufactureId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ToasterTypeDetails">
+      <EntityTypeMapping TypeName="JooleModel.ToasterTypeDetail">
+        <MappingFragment StoreEntitySet="ToasterTypeDetails">
+          <ScalarProperty Name="ModelTypeId" ColumnName="ModelTypeId" />
+          <ScalarProperty Name="UseType" ColumnName="UseType" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="Accessories" ColumnName="Accessories" />
+          <ScalarProperty Name="ModelYear" ColumnName="ModelYear" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="JooleModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VacuumTypeDetails">
+      <EntityTypeMapping TypeName="JooleModel.VacuumTypeDetail">
+        <MappingFragment StoreEntitySet="VacuumTypeDetails">
+          <ScalarProperty Name="ModelTypeId" ColumnName="ModelTypeId" />
+          <ScalarProperty Name="UseType" ColumnName="UseType" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="Accessories" ColumnName="Accessories" />
+          <ScalarProperty Name="Charging" ColumnName="Charging" />
+          <ScalarProperty Name="ModelYear" ColumnName="ModelYear" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FanDescriptions">
+      <EntityTypeMapping TypeName="JooleModel.FanDescription">
+        <MappingFragment StoreEntitySet="FanDescription">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="AirFlow" ColumnName="AirFlow" />
+          <ScalarProperty Name="PowerMin" ColumnName="PowerMin" />
+          <ScalarProperty Name="PowerMax" ColumnName="PowerMax" />
+          <ScalarProperty Name="OperatingVoltageMin" ColumnName="OperatingVoltageMin" />
+          <ScalarProperty Name="OperatingVoltageMax" ColumnName="OperatingVoltageMax" />
+          <ScalarProperty Name="FanSpeedMin" ColumnName="FanSpeedMin" />
+          <ScalarProperty Name="FanSpeedMax" ColumnName="FanSpeedMax" />
+          <ScalarProperty Name="NumOfFanSpeed" ColumnName="NumOfFanSpeed" />
+          <ScalarProperty Name="SoundAtMaxSpeed" ColumnName="SoundAtMaxSpeed" />
+          <ScalarProperty Name="FanSweepDiameter" ColumnName="FanSweepDiameter" />
+          <ScalarProperty Name="HeightMin" ColumnName="HeightMin" />
+          <ScalarProperty Name="HeightMax" ColumnName="HeightMax" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ToasterDescriptions">
+      <EntityTypeMapping TypeName="JooleModel.ToasterDescription">
+        <MappingFragment StoreEntitySet="ToasterDescription">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="PowerMin" ColumnName="PowerMin" />
+          <ScalarProperty Name="PowerMax" ColumnName="PowerMax" />
+          <ScalarProperty Name="OperatingVoltageMin" ColumnName="OperatingVoltageMin" />
+          <ScalarProperty Name="OperatingVoltageMax" ColumnName="OperatingVoltageMax" />
+          <ScalarProperty Name="LevelOfTemperature" ColumnName="LevelOfTemperature" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VacuumDescriptions">
+      <EntityTypeMapping TypeName="JooleModel.VacuumDescription">
+        <MappingFragment StoreEntitySet="VacuumDescription">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="AirFlow" ColumnName="AirFlow" />
+          <ScalarProperty Name="PowerMin" ColumnName="PowerMin" />
+          <ScalarProperty Name="PowerMax" ColumnName="PowerMax" />
+          <ScalarProperty Name="OperatingVoltageMin" ColumnName="OperatingVoltageMin" />
+          <ScalarProperty Name="OperatingVoltageMax" ColumnName="OperatingVoltageMax" />
+          <ScalarProperty Name="NumOfSuction" ColumnName="NumOfSuction" />
+          <ScalarProperty Name="SoundAtMaxPower" ColumnName="SoundAtMaxPower" />
+          <ScalarProperty Name="MaxRuntime" ColumnName="MaxRuntime" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

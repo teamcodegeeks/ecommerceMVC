@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JooleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Joole.dbo.FanDescription' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FanDescription">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="AirFlow" />
+      <PropertyRef Name="PowerMin" />
+      <PropertyRef Name="PowerMax" />
+      <PropertyRef Name="OperatingVoltageMin" />
+      <PropertyRef Name="OperatingVoltageMax" />
+      <PropertyRef Name="FanSpeedMin" />
+      <PropertyRef Name="FanSpeedMax" />
+      <PropertyRef Name="NumOfFanSpeed" />
+      <PropertyRef Name="SoundAtMaxSpeed" />
+      <PropertyRef Name="FanSweepDiameter" />
+      <PropertyRef Name="HeightMin" />
+      <PropertyRef Name="HeightMax" />
+      <PropertyRef Name="Weight" />
+    </Key>
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="AirFlow" Type="smallint" Nullable="false" />
+    <Property Name="PowerMin" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="PowerMax" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperatingVoltageMin" Type="smallint" Nullable="false" />
+    <Property Name="OperatingVoltageMax" Type="smallint" Nullable="false" />
+    <Property Name="FanSpeedMin" Type="smallint" Nullable="false" />
+    <Property Name="FanSpeedMax" Type="smallint" Nullable="false" />
+    <Property Name="NumOfFanSpeed" Type="tinyint" Nullable="false" />
+    <Property Name="SoundAtMaxSpeed" Type="tinyint" Nullable="false" />
+    <Property Name="FanSweepDiameter" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="HeightMin" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="HeightMax" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="Weight" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FanTypeDetails">
+    <Key>
+      <PropertyRef Name="ModelTypeId" />
+    </Key>
+    <Property Name="ModelTypeId" Type="int" Nullable="false" />
+    <Property Name="UseType" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Application" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MountingLocation" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Accessories" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ModelYear" Type="smallint" Nullable="false" />
+    <Property Name="ModelId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacture">
+    <Key>
+      <PropertyRef Name="ManufactureId" />
+    </Key>
+    <Property Name="ManufactureId" Type="int" Nullable="false" />
+    <Property Name="ManufactureIdName" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ModelId" />
+    </Key>
+    <Property Name="ModelId" Type="int" Nullable="false" />
+    <Property Name="ModelName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SeriesId" Type="int" Nullable="false" />
+    <Property Name="ManufactureId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ModelTypeId" Type="int" Nullable="false" />
+    <Property Name="ModelId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductSubCategory">
+    <Key>
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Series">
+    <Key>
+      <PropertyRef Name="SeriesId" />
+    </Key>
+    <Property Name="SeriesId" Type="int" Nullable="false" />
+    <Property Name="SeriesName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="ManufactureId" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Joole.dbo.ToasterDescription' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ToasterDescription">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="PowerMin" />
+      <PropertyRef Name="PowerMax" />
+      <PropertyRef Name="OperatingVoltageMin" />
+      <PropertyRef Name="OperatingVoltageMax" />
+      <PropertyRef Name="LevelOfTemperature" />
+      <PropertyRef Name="Length" />
+      <PropertyRef Name="Width" />
+      <PropertyRef Name="Height" />
+      <PropertyRef Name="Weight" />
+    </Key>
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="PowerMin" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="PowerMax" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperatingVoltageMin" Type="smallint" Nullable="false" />
+    <Property Name="OperatingVoltageMax" Type="smallint" Nullable="false" />
+    <Property Name="LevelOfTemperature" Type="tinyint" Nullable="false" />
+    <Property Name="Length" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Width" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Height" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Weight" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ToasterTypeDetails">
+    <Key>
+      <PropertyRef Name="ModelTypeId" />
+    </Key>
+    <Property Name="ModelTypeId" Type="int" Nullable="false" />
+    <Property Name="UseType" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Application" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Accessories" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ModelYear" Type="smallint" Nullable="false" />
+    <Property Name="ModelId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="UserRoleId" Type="tinyint" Nullable="false" />
+    <Property Name="Picture" Type="varbinary(max)" />
+    <Property Name="RoleDescription" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Joole.dbo.VacuumDescription' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VacuumDescription">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="AirFlow" />
+      <PropertyRef Name="PowerMin" />
+      <PropertyRef Name="PowerMax" />
+      <PropertyRef Name="OperatingVoltageMin" />
+      <PropertyRef Name="OperatingVoltageMax" />
+      <PropertyRef Name="NumOfSuction" />
+      <PropertyRef Name="SoundAtMaxPower" />
+      <PropertyRef Name="MaxRuntime" />
+      <PropertyRef Name="Height" />
+      <PropertyRef Name="Weight" />
+    </Key>
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="AirFlow" Type="smallint" Nullable="false" />
+    <Property Name="PowerMin" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="PowerMax" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperatingVoltageMin" Type="smallint" Nullable="false" />
+    <Property Name="OperatingVoltageMax" Type="smallint" Nullable="false" />
+    <Property Name="NumOfSuction" Type="tinyint" Nullable="false" />
+    <Property Name="SoundAtMaxPower" Type="tinyint" Nullable="false" />
+    <Property Name="MaxRuntime" Type="smallint" Nullable="false" />
+    <Property Name="Height" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="Weight" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VacuumTypeDetails">
+    <Key>
+      <PropertyRef Name="ModelTypeId" />
+    </Key>
+    <Property Name="ModelTypeId" Type="int" Nullable="false" />
+    <Property Name="UseType" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Application" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Accessories" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Charging" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ModelYear" Type="smallint" Nullable="false" />
+    <Property Name="ModelId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Joole_FK_Category_SubCategpry">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="1" />
+    <End Role="ProductSubCategory" Type="Self.ProductSubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="ProductSubCategory">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_FanDescription">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="FanDescription" Type="Self.FanDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="FanDescription">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_Manufacture_Series">
+    <End Role="Manufacture" Type="Self.Manufacture" Multiplicity="1" />
+    <End Role="Series" Type="Self.Series" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacture">
+        <PropertyRef Name="ManufactureId" />
+      </Principal>
+      <Dependent Role="Series">
+        <PropertyRef Name="ManufactureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_Model_FanTypeDetails">
+    <End Role="Model" Type="Self.Model" Multiplicity="1" />
+    <End Role="FanTypeDetails" Type="Self.FanTypeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModelId" />
+      </Principal>
+      <Dependent Role="FanTypeDetails">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_Model_Series">
+    <End Role="Series" Type="Self.Series" Multiplicity="1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Series">
+        <PropertyRef Name="SeriesId" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="SeriesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_Model_ToasterTypeDetails">
+    <End Role="Model" Type="Self.Model" Multiplicity="1" />
+    <End Role="ToasterTypeDetails" Type="Self.ToasterTypeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModelId" />
+      </Principal>
+      <Dependent Role="ToasterTypeDetails">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_Model_VacuumTypeDetails">
+    <End Role="Model" Type="Self.Model" Multiplicity="1" />
+    <End Role="VacuumTypeDetails" Type="Self.VacuumTypeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModelId" />
+      </Principal>
+      <Dependent Role="VacuumTypeDetails">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_Product_Model">
+    <End Role="Model" Type="Self.Model" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModelId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_ProductSubCategory_Model">
+    <End Role="ProductSubCategory" Type="Self.ProductSubCategory" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSubCategory">
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_Subcategory_Series">
+    <End Role="ProductSubCategory" Type="Self.ProductSubCategory" Multiplicity="1" />
+    <End Role="Series" Type="Self.Series" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSubCategory">
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="Series">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_ToasterDescription">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ToasterDescription" Type="Self.ToasterDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ToasterDescription">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Joole_FK_VacuumDescription">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="VacuumDescription" Type="Self.VacuumDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="VacuumDescription">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JooleModelStoreContainer">
+    <EntitySet Name="FanTypeDetails" EntityType="Self.FanTypeDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacture" EntityType="Self.Manufacture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductSubCategory" EntityType="Self.ProductSubCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Series" EntityType="Self.Series" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ToasterTypeDetails" EntityType="Self.ToasterTypeDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VacuumTypeDetails" EntityType="Self.VacuumTypeDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FanDescription" EntityType="Self.FanDescription" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FanDescription].[ProductId] AS [ProductId], 
+    [FanDescription].[AirFlow] AS [AirFlow], 
+    [FanDescription].[PowerMin] AS [PowerMin], 
+    [FanDescription].[PowerMax] AS [PowerMax], 
+    [FanDescription].[OperatingVoltageMin] AS [OperatingVoltageMin], 
+    [FanDescription].[OperatingVoltageMax] AS [OperatingVoltageMax], 
+    [FanDescription].[FanSpeedMin] AS [FanSpeedMin], 
+    [FanDescription].[FanSpeedMax] AS [FanSpeedMax], 
+    [FanDescription].[NumOfFanSpeed] AS [NumOfFanSpeed], 
+    [FanDescription].[SoundAtMaxSpeed] AS [SoundAtMaxSpeed], 
+    [FanDescription].[FanSweepDiameter] AS [FanSweepDiameter], 
+    [FanDescription].[HeightMin] AS [HeightMin], 
+    [FanDescription].[HeightMax] AS [HeightMax], 
+    [FanDescription].[Weight] AS [Weight]
+    FROM [dbo].[FanDescription] AS [FanDescription]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ToasterDescription" EntityType="Self.ToasterDescription" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ToasterDescription].[ProductId] AS [ProductId], 
+    [ToasterDescription].[PowerMin] AS [PowerMin], 
+    [ToasterDescription].[PowerMax] AS [PowerMax], 
+    [ToasterDescription].[OperatingVoltageMin] AS [OperatingVoltageMin], 
+    [ToasterDescription].[OperatingVoltageMax] AS [OperatingVoltageMax], 
+    [ToasterDescription].[LevelOfTemperature] AS [LevelOfTemperature], 
+    [ToasterDescription].[Length] AS [Length], 
+    [ToasterDescription].[Width] AS [Width], 
+    [ToasterDescription].[Height] AS [Height], 
+    [ToasterDescription].[Weight] AS [Weight]
+    FROM [dbo].[ToasterDescription] AS [ToasterDescription]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VacuumDescription" EntityType="Self.VacuumDescription" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VacuumDescription].[ProductId] AS [ProductId], 
+    [VacuumDescription].[AirFlow] AS [AirFlow], 
+    [VacuumDescription].[PowerMin] AS [PowerMin], 
+    [VacuumDescription].[PowerMax] AS [PowerMax], 
+    [VacuumDescription].[OperatingVoltageMin] AS [OperatingVoltageMin], 
+    [VacuumDescription].[OperatingVoltageMax] AS [OperatingVoltageMax], 
+    [VacuumDescription].[NumOfSuction] AS [NumOfSuction], 
+    [VacuumDescription].[SoundAtMaxPower] AS [SoundAtMaxPower], 
+    [VacuumDescription].[MaxRuntime] AS [MaxRuntime], 
+    [VacuumDescription].[Height] AS [Height], 
+    [VacuumDescription].[Weight] AS [Weight]
+    FROM [dbo].[VacuumDescription] AS [VacuumDescription]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="Joole_FK_Category_SubCategpry" Association="Self.Joole_FK_Category_SubCategpry">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="ProductSubCategory" EntitySet="ProductSubCategory" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_FanDescription" Association="Self.Joole_FK_FanDescription">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="FanDescription" EntitySet="FanDescription" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_Manufacture_Series" Association="Self.Joole_FK_Manufacture_Series">
+      <End Role="Manufacture" EntitySet="Manufacture" />
+      <End Role="Series" EntitySet="Series" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_Model_FanTypeDetails" Association="Self.Joole_FK_Model_FanTypeDetails">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="FanTypeDetails" EntitySet="FanTypeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_Model_Series" Association="Self.Joole_FK_Model_Series">
+      <End Role="Series" EntitySet="Series" />
+      <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_Model_ToasterTypeDetails" Association="Self.Joole_FK_Model_ToasterTypeDetails">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="ToasterTypeDetails" EntitySet="ToasterTypeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_Model_VacuumTypeDetails" Association="Self.Joole_FK_Model_VacuumTypeDetails">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="VacuumTypeDetails" EntitySet="VacuumTypeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_Product_Model" Association="Self.Joole_FK_Product_Model">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_ProductSubCategory_Model" Association="Self.Joole_FK_ProductSubCategory_Model">
+      <End Role="ProductSubCategory" EntitySet="ProductSubCategory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_Subcategory_Series" Association="Self.Joole_FK_Subcategory_Series">
+      <End Role="ProductSubCategory" EntitySet="ProductSubCategory" />
+      <End Role="Series" EntitySet="Series" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_ToasterDescription" Association="Self.Joole_FK_ToasterDescription">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ToasterDescription" EntitySet="ToasterDescription" />
+    </AssociationSet>
+    <AssociationSet Name="Joole_FK_VacuumDescription" Association="Self.Joole_FK_VacuumDescription">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="VacuumDescription" EntitySet="VacuumDescription" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
