@@ -14,14 +14,6 @@ namespace eCommerceMVC.Models
     
     public partial class Product
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
-        {
-            this.FanDescriptions = new HashSet<FanDescription>();
-            this.ToasterDescriptions = new HashSet<ToasterDescription>();
-            this.VacuumDescriptions = new HashSet<VacuumDescription>();
-        }
-    
         public long ProductId { get; set; }
         public string ProductName { get; set; }
         public int ModelTypeId { get; set; }
@@ -29,12 +21,8 @@ namespace eCommerceMVC.Models
         public int SubCategoryId { get; set; }
     
         public virtual Model Model { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FanDescription> FanDescriptions { get; set; }
+        public virtual ModelType ModelType { get; set; }
+        public virtual ProductTechSpec ProductTechSpec { get; set; }
         public virtual ProductSubCategory ProductSubCategory { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ToasterDescription> ToasterDescriptions { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VacuumDescription> VacuumDescriptions { get; set; }
     }
 }

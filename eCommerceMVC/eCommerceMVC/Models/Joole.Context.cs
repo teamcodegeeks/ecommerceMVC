@@ -25,18 +25,15 @@ namespace eCommerceMVC.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<FanTypeDetail> FanTypeDetails { get; set; }
         public virtual DbSet<Manufacture> Manufactures { get; set; }
         public virtual DbSet<Model> Models { get; set; }
+        public virtual DbSet<ModelType> ModelTypes { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
         public virtual DbSet<ProductSubCategory> ProductSubCategories { get; set; }
         public virtual DbSet<Series> Series { get; set; }
-        public virtual DbSet<ToasterTypeDetail> ToasterTypeDetails { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<VacuumTypeDetail> VacuumTypeDetails { get; set; }
-        public virtual DbSet<FanDescription> FanDescriptions { get; set; }
-        public virtual DbSet<ToasterDescription> ToasterDescriptions { get; set; }
-        public virtual DbSet<VacuumDescription> VacuumDescriptions { get; set; }
+        public virtual DbSet<ProductTechSpec> ProductTechSpecs { get; set; }
+        public virtual DbSet<SpecFilter> SpecFilters { get; set; }
     }
 }

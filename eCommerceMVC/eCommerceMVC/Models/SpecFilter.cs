@@ -12,16 +12,13 @@ namespace eCommerceMVC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class FanTypeDetail
+    public partial class SpecFilter
     {
-        public int ModelTypeId { get; set; }
-        public string UseType { get; set; }
-        public string Application { get; set; }
-        public string MountingLocation { get; set; }
-        public string Accessories { get; set; }
-        public short ModelYear { get; set; }
-        public int ModelId { get; set; }
+        public int SubCategoryId { get; set; }
+        public string PropertyName { get; set; }
+        public int MIN { get; set; }
+        public int MAX { get; set; }
     
-        public virtual Model Model { get; set; }
+        public virtual ProductSubCategory ProductSubCategory { get; set; }
     }
 }

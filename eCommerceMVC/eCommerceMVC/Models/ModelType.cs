@@ -12,15 +12,24 @@ namespace eCommerceMVC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ToasterTypeDetail
+    public partial class ModelType
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ModelType()
+        {
+            this.Products = new HashSet<Product>();
+        }
+    
         public int ModelTypeId { get; set; }
         public string UseType { get; set; }
         public string Application { get; set; }
+        public string MountingLocation { get; set; }
         public string Accessories { get; set; }
         public short ModelYear { get; set; }
         public int ModelId { get; set; }
     
         public virtual Model Model { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

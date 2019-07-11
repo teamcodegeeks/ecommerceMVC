@@ -17,24 +17,20 @@ namespace eCommerceMVC.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Model()
         {
-            this.FanTypeDetails = new HashSet<FanTypeDetail>();
-            this.ToasterTypeDetails = new HashSet<ToasterTypeDetail>();
-            this.VacuumTypeDetails = new HashSet<VacuumTypeDetail>();
+            this.ModelTypes = new HashSet<ModelType>();
             this.Products = new HashSet<Product>();
         }
     
         public int ModelId { get; set; }
         public string ModelName { get; set; }
         public int SeriesId { get; set; }
+        public int SubCategoryId { get; set; }
         public int ManufactureId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FanTypeDetail> FanTypeDetails { get; set; }
+        public virtual ICollection<ModelType> ModelTypes { get; set; }
         public virtual Series Series { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ToasterTypeDetail> ToasterTypeDetails { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VacuumTypeDetail> VacuumTypeDetails { get; set; }
+        public virtual ProductSubCategory ProductSubCategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
     }
