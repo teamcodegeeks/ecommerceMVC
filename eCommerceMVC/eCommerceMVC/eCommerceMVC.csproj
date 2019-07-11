@@ -156,17 +156,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Repository\GenericRepository.cs" />
-    <Compile Include="Repository\IGenericRepository.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\FanDescription.cs">
-      <DependentUpon>Joole.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\FanTypeDetail.cs">
-      <DependentUpon>Joole.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\Joole.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -188,6 +178,9 @@
     <Compile Include="Models\Model.cs">
       <DependentUpon>Joole.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelType.cs">
+      <DependentUpon>Joole.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Product.cs">
       <DependentUpon>Joole.tt</DependentUpon>
     </Compile>
@@ -197,27 +190,27 @@
     <Compile Include="Models\ProductSubCategory.cs">
       <DependentUpon>Joole.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductTechSpec.cs">
+      <DependentUpon>Joole.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Series.cs">
       <DependentUpon>Joole.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ToasterDescription.cs">
-      <DependentUpon>Joole.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ToasterTypeDetail.cs">
+    <Compile Include="Models\SpecFilter.cs">
       <DependentUpon>Joole.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
       <DependentUpon>Joole.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VacuumDescription.cs">
-      <DependentUpon>Joole.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VacuumTypeDetail.cs">
-      <DependentUpon>Joole.tt</DependentUpon>
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\IGenericRepository.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IUserRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Service\UserServicecs.cs" />
     <Compile Include="UoW\UoW.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -231,8 +224,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\Joole.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Joole.Context.cs</LastGenOutput>
       <DependentUpon>Joole.edmx</DependentUpon>
+      <LastGenOutput>Joole.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Joole.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -279,6 +272,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
