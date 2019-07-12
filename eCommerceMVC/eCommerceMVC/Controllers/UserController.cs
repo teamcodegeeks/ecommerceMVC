@@ -13,10 +13,15 @@ namespace eCommerceMVC.Controllers
     public class UserController : Controller
     {
         // GET: User
-        public ActionResult Index()
+        public ActionResult Login()
         {
             UserServicecs user = new UserServicecs();
             user.Login("Lana", "123123");
+            return View();
+        }
+        public ActionResult Register() {
+            UserServicecs user = new UserServicecs();
+            user.register("AllenHu", "125643", "123@gmail.com");
             return View();
         }
     }
